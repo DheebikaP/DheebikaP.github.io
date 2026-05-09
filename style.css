@@ -144,6 +144,26 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+/* Affiliation List Styling */
+.affiliation-list {
+    list-style: none; /* Removes default bullets for a cleaner look */
+    padding-left: 0;
+}
+
+.affiliation-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.05rem;
+}
+
+.affiliation-list li:last-child {
+    border-bottom: none;
+}
+
+.affiliation-list strong {
+    color: #1a252f;
+    margin-right: 5px;
+}
 
 /* Responsive Design */
 @media (max-width: 600px) {
