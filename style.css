@@ -6,12 +6,23 @@
 }
 
 body {
-    font-family: 'Georgia', serif; /* Classic academic feel */
+    font-family: 'Georgia', serif;
     line-height: 1.7;
     color: #333;
     background-color: #fcfcfc;
+    /* Added justified alignment */
+    text-align: justify; 
 }
 
+/* Ensure headings remain centered or left-aligned for better readability */
+h1, h2 {
+    text-align: center;
+}
+
+/* Optional: adjust justification for the publication items */
+.publication-item p {
+    text-align: justify;
+}
 .container {
     max-width: 900px;
     margin: 0 auto;
