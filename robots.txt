@@ -1,0 +1,8 @@
+# Profile: Dheebika Periyasamy
+# Website: https://dheebikap.github.io/
+
+User-agent: *
+Allow: /
+
+# Sitemaps help search engines find your publication list faster
+Sitemap: https://dheebikap.github.io/sitemap.xml
