@@ -9,10 +9,7 @@ body {
     font-family: 'Georgia', serif;
     line-height: 1.7;
     color: #333;
-    /* Pure white background locked in */
-    background-color: #ffffff;
-    position: relative;
-    z-index: 0;
+    background-color: #ffffff; /* Blank white background */
 }
 
 /* Typography and Justification */
@@ -68,7 +65,7 @@ nav ul li a:hover {
 
 /* Header & Profile Section */
 header {
-    background: transparent; /* Allows the white body and artwork to show through */
+    background: #ffffff;
     padding: 60px 0;
     text-align: center;
     border-bottom: 1px solid #eeeeee;
@@ -105,7 +102,7 @@ h1 {
 /* Main Content Sections */
 main {
     padding: 40px 0;
-    background: transparent;
+    background: #ffffff;
 }
 
 section {
@@ -124,7 +121,7 @@ h2 {
 
 /* Publication Item Styling */
 .publication-item {
-    background: #ffffff; /* Solid white to ensure text is always readable over the art */
+    background: #ffffff;
     padding: 15px;
     border-left: 4px solid #1a252f;
     margin-bottom: 15px;
