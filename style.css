@@ -1,0 +1,189 @@
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #ffffff; /* Blank white background */
+}
+
+/* Typography and Justification */
+h1, h2 {
+    text-align: center;
+}
+
+section p, 
+section li,
+.publication-item p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background: #1a252f;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Header & Profile Section */
+header {
+    background: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #1a252f;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1a252f;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+.institution {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 5px;
+}
+
+/* Main Content Sections */
+main {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: #1a252f;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Publication Item Styling */
+.publication-item {
+    background: #ffffff;
+    padding: 15px;
+    border-left: 4px solid #1a252f;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Affiliation & Awards List Styling */
+.affiliation-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.affiliation-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 1.05rem;
+}
+
+.affiliation-list li:last-child {
+    border-bottom: none;
+}
+
+.affiliation-list strong {
+    color: #1a252f;
+}
+
+/* Standard List Adjustments */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+/* Footer / Contact */
+footer {
+    background: #fdfdfd;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #dddddd;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
