@@ -37,45 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Generates 'Fractured Memory' shards instead of bubbles
-const createMemoryArt = () => {
-    const background = document.createElement('div');
-    background.style.position = 'fixed';
-    background.style.top = '0';
-    background.style.left = '0';
-    background.style.width = '100%';
-    background.style.height = '100%';
-    background.style.zIndex = '-1';
-    background.style.overflow = 'hidden';
-    background.style.pointerEvents = 'none';
-    document.body.appendChild(background);
+const createPalimpsest = () => {
+    const keywords = ['MEMORY', 'DISSENT', 'BODY', 'ARCHIVE', 'TAMIL', 'AFFECT', 'CARCERAL'];
+    const artContainer = document.createElement('div');
+    artContainer.style = 'position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; overflow:hidden;';
+    document.body.appendChild(artContainer);
 
-    for (let i = 0; i < 20; i++) {
-        const shard = document.createElement('div');
-        const width = Math.random() * 400 + 100;
-        const height = Math.random() * 200 + 50;
-        
-        shard.style.position = 'absolute';
-        shard.style.width = `${width}px`;
-        shard.style.height = `${height}px`;
-        // Using a muted 'ink' color to represent archival records
-        shard.style.background = `rgba(44, 62, 80, 0.03)`; 
-        shard.style.top = `${Math.random() * 100}%`;
-        shard.style.left = `${Math.random() * 100}%`;
-        
-        // Creative Clip-Path: Creates irregular, paper-like shards
-        shard.style.clipPath = `polygon(
-            ${Math.random()*20}% ${Math.random()*20}%, 
-            ${80+Math.random()*20}% ${Math.random()*20}%, 
-            ${80+Math.random()*20}% ${80+Math.random()*20}%, 
-            ${Math.random()*20}% ${80+Math.random()*20}%
-        )`;
-        
-        shard.style.transform = `rotate(${Math.random() * 45 - 22}deg)`;
-        shard.style.filter = 'blur(1px)'; // Slight blur to feel like a distant memory
-        
-        background.appendChild(shard);
+    for (let i = 0; i < 30; i++) {
+        const span = document.createElement('span');
+        span.innerText = keywords[Math.floor(Math.random() * keywords.length)];
+        span.style = `
+            position: absolute;
+            font-family: 'Georgia', serif;
+            font-size: ${Math.random() * 3 + 1}rem;
+            color: rgba(44, 62, 80, 0.03);
+            top: ${Math.random() * 100}%;
+            left: ${Math.random() * 100}%;
+            transform: rotate(${Math.random() * 360}deg);
+            white-space: nowrap;
+        `;
+        artContainer.appendChild(span);
     }
 };
+document.addEventListener('DOMContentLoaded', createPalimpsest);
 
     // Set initial state for sections
     sections.forEach(section => {
