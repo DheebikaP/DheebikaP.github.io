@@ -36,36 +36,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // 3. Generative Background Art
-    const createMemoryArt = () => {
-        const background = document.createElement('div');
-        background.style.position = 'fixed';
-        background.style.top = '0';
-        background.style.left = '0';
-        background.style.width = '100%';
-        background.style.height = '100%';
-        background.style.zIndex = '-1';
-        background.style.overflow = 'hidden';
-        background.style.pointerEvents = 'none';
-        document.body.appendChild(background);
+    // Generates 'Fractured Memory' shards instead of bubbles
+const createMemoryArt = () => {
+    const background = document.createElement('div');
+    background.style.position = 'fixed';
+    background.style.top = '0';
+    background.style.left = '0';
+    background.style.width = '100%';
+    background.style.height = '100%';
+    background.style.zIndex = '-1';
+    background.style.overflow = 'hidden';
+    background.style.pointerEvents = 'none';
+    document.body.appendChild(background);
 
-        for (let i = 0; i < 15; i++) {
-            const shape = document.createElement('div');
-            const size = Math.random() * 300 + 100;
-            
-            shape.style.position = 'absolute';
-            shape.style.width = `${size}px`;
-            shape.style.height = `${size}px`;
-            shape.style.background = `rgba(44, 62, 80, 0.02)`;
-            shape.style.borderRadius = `${Math.random() * 100}%`;
-            shape.style.top = `${Math.random() * 100}%`;
-            shape.style.left = `${Math.random() * 100}%`;
-            shape.style.filter = 'blur(60px)';
-            shape.style.transform = `rotate(${Math.random() * 360}deg)`;
-            
-            background.appendChild(shape);
-        }
-    };
+    for (let i = 0; i < 20; i++) {
+        const shard = document.createElement('div');
+        const width = Math.random() * 400 + 100;
+        const height = Math.random() * 200 + 50;
+        
+        shard.style.position = 'absolute';
+        shard.style.width = `${width}px`;
+        shard.style.height = `${height}px`;
+        // Using a muted 'ink' color to represent archival records
+        shard.style.background = `rgba(44, 62, 80, 0.03)`; 
+        shard.style.top = `${Math.random() * 100}%`;
+        shard.style.left = `${Math.random() * 100}%`;
+        
+        // Creative Clip-Path: Creates irregular, paper-like shards
+        shard.style.clipPath = `polygon(
+            ${Math.random()*20}% ${Math.random()*20}%, 
+            ${80+Math.random()*20}% ${Math.random()*20}%, 
+            ${80+Math.random()*20}% ${80+Math.random()*20}%, 
+            ${Math.random()*20}% ${80+Math.random()*20}%
+        )`;
+        
+        shard.style.transform = `rotate(${Math.random() * 45 - 22}deg)`;
+        shard.style.filter = 'blur(1px)'; // Slight blur to feel like a distant memory
+        
+        background.appendChild(shard);
+    }
+};
 
     // Set initial state for sections
     sections.forEach(section => {
