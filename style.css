@@ -9,9 +9,13 @@ body {
     font-family: 'Georgia', serif;
     line-height: 1.7;
     color: #333;
-    background-color: #fcfcfc;
-    /* Added justified alignment */
-    text-align: justify; 
+    /* This adds the artwork */
+    background-image: linear-gradient(rgba(252, 252, 252, 0.95), rgba(252, 252, 252, 0.95)), 
+                      url('assets/background-art.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: justify;
 }
 
 /* Ensure headings remain centered or left-aligned for better readability */
